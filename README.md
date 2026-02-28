@@ -16,3 +16,6 @@ The project focuses on automating routing and switching tasks using SSH-based de
 <P>This lab shows how to connect a local PC to a GNS3 router using VMware VMnet1 (Host-Only) through the GNS3 Cloud.
 
 Router interface is configured with an IP address and SSH is enabled. Connectivity is verified using ping from the PC, allowing secure remote access and automation testing.</p>
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+<img align="right" src="https://media4.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
