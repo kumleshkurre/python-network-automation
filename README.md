@@ -1,2 +1,18 @@
 # python-network-automation
-Developed Python network automation scripts to configure and manage enterprise routers and switches. Implemented automated configuration backup, bulk configuration deployment from text files, and routing/switching protocol setup (OSPF, HSRP, VLAN, ACL, DHCP, Static Routing) using Netmiko.
+📌 Overview
+---
+This repository contains Python-based network automation scripts developed to configure, manage, and maintain enterprise routers and switches.
+
+The project focuses on automating routing and switching tasks using SSH-based device access with Netmiko.
+
+## 🛠 Technologies Used
+- Python 3
+- Netmiko
+- SSH
+- Cisco IOS Devices (Lab Environment)
+- GNS3 (Lab Testing)
+
+## 🌐 Cloud to Router Connection Setup
+<P>This lab shows how to connect a local PC to a GNS3 router using VMware VMnet1 (Host-Only) through the GNS3 Cloud.
+
+Router interface is configured with an IP address and SSH is enabled. Connectivity is verified using ping from the PC, allowing secure remote access and automation testing.</p>
