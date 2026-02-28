@@ -17,5 +17,5 @@ The project focuses on automating routing and switching tasks using SSH-based de
 
 Router interface is configured with an IP address and SSH is enabled. Connectivity is verified using ping from the PC, allowing secure remote access and automation testing.</p>
 
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
-<img align="right" src="https://media4.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+
+<img align="right" src="https://github.com/kumleshkurre/python-network-automation/blob/main/screenshot/cloud%20to%20router%20connection%20setup.png">
