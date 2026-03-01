@@ -290,6 +290,63 @@ try:
 except Exception as e:
     print("Error:", e)
 ```
+## 4. RIP configuration
+<img align="right" src="https://github.com/kumleshkurre/python-network-automation/blob/main/screenshot/rip.png">
+
+## script
+```bash
+from netmiko import ConnectHandler
+
+# Router Details
+router = {
+    "device_type": "cisco_ios",
+    "host": "192.168.138.138",
+    "username": "admin",
+    "password": "admin",
+}
+
+try:
+    # Connect to Router
+    connection = ConnectHandler(**router)
+    print("Connected Successfully\n")
+
+    # Check interface before config
+    output = connection.send_command("show ip interface brief")
+    print("\n===== Interface Status Before Config =====")
+    print(output)
+
+    # Configuration Commands
+    config_commands = [
+       "router rip",
+       "version 2",
+       "no auto-summary",
+       "network 192.168.10.0"
+           
+    ]
+
+    output = connection.send_config_set(config_commands)
+    print("\n===== Configuration Output =====")
+    print(output)
+
+    # Verify Again
+    output = connection.send_command("show ip interface brief")
+    print("\n===== Interface Status After Config =====")
+    print(output)
+
+    # Show Running Config
+    output1 = connection.send_command("show ip protocol")
+    output2 = connection.send_command("show ip route")
+    print("\n===== RIP Routing Configuration =====")
+    print(output1)
+    print(output2)
+
+    # Disconnect
+    connection.disconnect()
+    print("\nDisconnected Successfully")
+
+except Exception as e:
+    print("Error:", e)
+```
 ## 5. EGRP configuration
 <img align="right" src="https://github.com/kumleshkurre/python-network-automation/blob/main/screenshot/EIGRP%20AUTOMATION.png">
 
@@ -351,7 +408,7 @@ except Exception as e:
     print("Error:", e)
 ```
 ## 6. OSPF configuration
-<img align="right" src="https://github.com/kumleshkurre/python-network-automation/blob/main/screenshot/OSPF%20AUTOMATION.png">
+<img align="right" src="https://github.com/kumleshkurre/python-network-automation/blob/main/screenshot/ospf.png">
 
 ## script router 1
 ```bash
